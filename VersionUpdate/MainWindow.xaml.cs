@@ -99,7 +99,7 @@ namespace VersionUpdate
 
         private string ReplaceGroup(Match m, string replacement)
         {
-            return Regex.Replace(m.Value, m.Groups[1].Value, replacement);
+            return m.Value.Replace(m.Groups[1].Value, replacement);
         }
     }
 }
