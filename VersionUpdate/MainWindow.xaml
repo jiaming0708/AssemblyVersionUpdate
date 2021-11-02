@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VersionUpdate"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="298" Width="508">
     <Grid>
+        <TextBox x:Name="txtPath" HorizontalAlignment="Left" Margin="164,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" IsEnabled="False"/>
+        <Label x:Name="label" Content="專案目錄" HorizontalAlignment="Left" Margin="91,0,0,0" VerticalAlignment="Center"/>
+        <Button x:Name="btnPathChoose" Content="選擇目錄" HorizontalAlignment="Left" Margin="310,0,0,0" VerticalAlignment="Center" Click="btnPathChoose_Click"/>
+        <Label x:Name="label_Copy" Content="版本" HorizontalAlignment="Left" Margin="115,84,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtVersion" HorizontalAlignment="Left" Margin="164,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="5.2110.1102.0"/>
+        <Button x:Name="btnConfirm" Content="執行" HorizontalAlignment="Left" Margin="164,194,0,0" VerticalAlignment="Top" Click="btnConfirm_Click"/>
 
     </Grid>
 </Window>
