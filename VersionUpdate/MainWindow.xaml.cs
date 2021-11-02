@@ -82,12 +82,14 @@ namespace VersionUpdate
                 foreach (var file in files)
                 {
                     var assemblyContent = File.ReadAllText(file.FullName);
-                    var assemblyVersionPattern = @"(?<!\/\/ )\[assembly: AssemblyVersion\((.*)\)\]";
-                    var assemblyFileVersionPattern = @"(?<!\/\/ )\[assembly: AssemblyFileVersion\((.*)\)\]";
+                    var assemblyVersionPattern = @"(?<!\/\/ )\[assembly: AssemblyVersion\(""(.*)""\)\]";
+                    var assemblyFileVersionPattern = @"(?<!\/\/ )\[assembly: AssemblyFileVersion\(""(.*)""\)\]";
                     assemblyContent = Regex.Replace(assemblyContent, assemblyVersionPattern, m => ReplaceGroup(m, versionWithAuto));
                     assemblyContent = Regex.Replace(assemblyContent, assemblyFileVersionPattern, m => ReplaceGroup(m, version));
                     File.WriteAllText(file.FullName, assemblyContent);
                 }
+
+                MessageBox.Show($"執行完畢，共 {files.Count()} 檔案被更改!");
             }
             catch (Exception ex)
             {
