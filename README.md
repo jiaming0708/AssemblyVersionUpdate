@@ -1,9 +1,6 @@
-# VersionUpdate
+# 目的
 
-This tool able to replace the version of `AssemblyVersion` and `AssemblyFileVersion` in **AssemblyInfo.cs** in project.
+一個方案有太多的專案，版號改起來很累，透過這個工具能夠直接掃描某個目錄底下的所有 `AssemlbyInfo.cs` ，並且修改 `AssemblyVersion` 和 `AssemblyFileVersion`。
 
-# How to use
-Input the version and choose the solution folder which you want to replace, click confirm then check all `AssemblyInfo.cs` in the folder.
-
-# Development
-Base on WPF 6.0 for window
+# 開發
+嘗試使用 WPF 6.0 來作為專案架構。
